@@ -1,3 +1,14 @@
+import ProcessOutputsCard from "../../../components/ProcessOutputsCard";
+
+const researcherForms = [
+  { code: "—", title: "OVPRDE Clearance Form", category: "Clearance", status: "available" },
+  { code: "FM-USeP-KTT-01", title: "Classroom Coursework Output Form", category: "Disclosure", status: "available" },
+  { code: "—", title: "Signed Deed of Assignment", category: "Legal", status: "pending" },
+  { code: "FM-USeP-KTT-02", title: "Technology Disclosure Form", category: "Disclosure", status: "available" },
+  { code: "FM-USeP-KTT-03", title: "Non-Disclosure Agreement (NDA)", category: "Legal", status: "draft" },
+  { code: "FM-USeP-KTT-04", title: "Triage Decision Criteria Form", category: "Evaluation", status: "available" },
+];
+
 export default function InternalDashboard() {
   return (
     <div className="space-y-6">
@@ -248,6 +259,14 @@ export default function InternalDashboard() {
           </div>
         </div>
       </div>
+
+      {/* Process Outputs */}
+      <ProcessOutputsCard
+        forms={researcherForms}
+        accentColor="maroon"
+        title="Process Outputs"
+        subtitle="KTTD forms for academic units and researchers"
+      />
 
       {/* Innovation Banner */}
       <div className="bg-maroon-dark text-white rounded-xl p-6 relative overflow-hidden shadow-md">
