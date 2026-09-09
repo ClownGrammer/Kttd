@@ -1,10 +1,7 @@
 export default function Hero() {
   return (
-    <section className="relative min-h-[480px] flex items-center overflow-hidden pt-16">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-maroon-dark via-maroon to-maroon-dark" />
-
-      {/* Decorative overlay pattern */}
+    <section className="relative min-h-[440px] md:min-h-[480px] flex items-center overflow-hidden pt-16 bg-gradient-to-br from-maroon-dark via-maroon to-maroon-dark text-white">
+      {/* Subtle geometric overlay */}
       <div
         className="absolute inset-0 opacity-10"
         style={{
@@ -12,19 +9,18 @@ export default function Hero() {
         }}
       />
 
-      {/* Radial glow effect */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gold/5 rounded-full blur-3xl" />
+      {/* Radial glow effects */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gold/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 left-0 w-72 h-72 bg-maroon-deeper/50 rounded-full blur-3xl" />
 
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <div className="max-w-2xl">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight animate-fade-in-up">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight tracking-tight text-white animate-fade-in-up">
             Empowering USeP&apos;s{" "}
             <span className="text-gold">Innovation Ecosystem</span>
           </h1>
           <p
-            className="mt-6 text-lg md:text-xl text-white/70 leading-relaxed max-w-xl animate-fade-in-up"
+            className="mt-5 text-sm sm:text-base text-gray-200 leading-relaxed max-w-xl animate-fade-in-up"
             style={{ animationDelay: "0.15s" }}
           >
             Secure, streamlined, and efficient electronic filing for inventors,
@@ -32,40 +28,24 @@ export default function Hero() {
             Philippines.
           </p>
           <div
-            className="mt-10 flex flex-wrap gap-4 animate-fade-in-up"
+            className="mt-8 flex flex-wrap items-center gap-3.5 animate-fade-in-up"
             style={{ animationDelay: "0.3s" }}
           >
             <a
               href="#portal"
-              className="inline-flex items-center gap-2 bg-gold hover:bg-gold-dark text-maroon-dark font-semibold px-8 py-3.5 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-gold/20 hover:-translate-y-0.5"
+              className="inline-flex items-center justify-center bg-gold hover:bg-gold-dark text-maroon-dark font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-lg shadow-md hover:shadow-gold/20 transition-all cursor-pointer"
             >
-              Our Services
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
+              Get Started
             </a>
             <a
-              href="#about"
-              className="inline-flex items-center gap-2 border-2 border-white/30 hover:border-white/60 text-white font-semibold px-8 py-3.5 rounded-lg transition-all duration-300 hover:bg-white/5 hover:-translate-y-0.5"
+              href="#portal"
+              className="inline-flex items-center justify-center border-2 border-white/40 hover:border-white text-white font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-lg hover:bg-white/10 transition-all cursor-pointer"
             >
-              Learn More
+              Submit Now
             </a>
           </div>
         </div>
       </div>
-
-      {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent" />
     </section>
   );
 }
